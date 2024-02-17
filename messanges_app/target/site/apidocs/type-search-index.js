@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.mycompany.messanges_app","l":"connector"},{"p":"com.mycompany.messanges_app","l":"Main"},{"p":"com.mycompany.messanges_app","l":"Messanges_app"}];updateSearchResults();
