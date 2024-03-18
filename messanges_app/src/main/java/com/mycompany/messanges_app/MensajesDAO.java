@@ -5,6 +5,7 @@
 package com.mycompany.messanges_app;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 /**
  *
@@ -39,8 +40,34 @@ public class MensajesDAO {
    
    public static void leerMensajeDB(){
        
+        connector db_connect = new connector();
+        
+        PreparedStatement  ps = null;
+        
+        ResultSet  rs = null;
+        
+        try(Connection connector = db_connect.get_connection()){
+            
+            String query = "SELECT * FROM mensajes";
+            
+            ps = connector.prepareStatement(query);
+            rs = ps.executeQuery();
+            
+            
+            while(rs.next()){
+                System.out.println("ID: "+ rs.getInt("id_mesanje"));
+                System.out.println("Message: "+rs.getString("mensaje"));
+                System.out.println("Author "+ rs.getString("auto_mensaje"));
+                System.out.println("Date: "+ rs.getString("date"));
+                System.out.println("");
+            }
+            
+        } catch (SQLException e){
+            System.out.println("Error");
+           System.out.println(e);
+       
+        }
    }
-   
    public static void borrarMensajeDB(int id_mensaje){
        
    }

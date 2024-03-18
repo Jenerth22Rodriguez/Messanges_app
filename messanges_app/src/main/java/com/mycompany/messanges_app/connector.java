@@ -17,8 +17,9 @@ public class connector {
         Connection conection = null;
         
         try{
-            conection = DriverManager.getConnection("jdbc:mysql://localhost:3308/mensajes_app", "root", "");
-
+            //conection = DriverManager.getConnection("jdbc:mysql://localhost:3308/mensajes_app", "root", "");
+             String jdbcUrl = "jdbc:mysql://localhost:3308/mensajes_app?serverTimezone=UTC";
+            conection = DriverManager.getConnection(jdbcUrl, "root", "");
         }
         catch(SQLException e) {
             System.out.println(e);
