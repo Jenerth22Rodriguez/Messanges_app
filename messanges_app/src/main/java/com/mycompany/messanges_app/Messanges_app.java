@@ -20,13 +20,13 @@ public class Messanges_app {
         
         do {
             System.out.println("------------------------------");
-            System.out.println("Aplicacion de Mensaje");
-            System.out.println("1. Crear un mensaje");
-            System.out.println("2. Listar mensajes");
+            System.out.println("Aplication Message App");
+            System.out.println("1. Create a mensaje");
+            System.out.println("2. Read mensajes");
             System.out.println("3. Delete message");
             System.out.println("4. Edit message");
-            System.out.println("5. Salir");
-            
+            System.out.println("5. Quit");
+            System.out.println("------------------------------");
             opcion = sc.nextInt();
             
             switch (opcion ){
